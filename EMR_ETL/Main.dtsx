@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{97936259-04B8-4280-92A8-CE3A3E848A2E}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{D3E77B8A-84A0-4D75-A92B-FDEF556C38FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,45 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAXdEDDxGO10kxKnZDAiWO9AAAAAASAAACgAAAAEAAAABrEF1iSHx1RSCrK2MjlgxcYAAAAnDvMRuKq38j89Y0eHPeMl6bFG1fsilcMFAAAAKYj4iZkA+Q9ivSdO+zYgPIbGN+P</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/LI78IpTJq95hzSrhPt/jAAAAAASAAACgAAAAEAAAADN+6CaxI+vdOMFOw4rsq90YAAAAnYd1dqaiwqPdYQ+kKzW8GWcG9q2N/3q6FAAAAJkxXNiW/yPZlGCM4SDXgaK090AL</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RCO_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{589DF859-33AB-4C27-ACFA-92373364397D}"
+      DTS:ObjectName="RCO_DW">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DW_ConnectionString]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ba-use1-sandbox-ass-data.database.windows.net;User ID=AGirme;Initial Catalog=rco_dw;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABdPW5C1fSXrucfuGHluO/WAAAAAASAAACgAAAAEAAAAP3MMmXBG4ao+2AfsUqlgIsYAAAAh4vcgbg9Y/C+nJ073ns6NYhUYi4Hbb4oFAAAADZdl5t7Q/Azxl/7mYDSjgzvv0t2</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RCO_Ods DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6F0586C1-CB89-4B97-B214-41F7CF47793F}"
+      DTS:ObjectName="RCO_Ods DB">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::ODS_ConnectionString]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ba-use1-sandbox-ass-data.database.windows.net;User ID=AGirme;Initial Catalog=rco_ods;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAaQz4J1JAXImaS/0M3xVvtAAAAAASAAACgAAAAEAAAAHEOaKvKqCWhdPu1RrqVUpEYAAAApKD0MGUwfSjkJ1LyE79PlOWyYMiOd3GtFAAAAGl071zeq/0UA7dcSukqYzodR1Cq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,8 +84,197 @@
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{42C002A4-C508-4600-923C-72BAB0F4E27F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLBatchTS">
+      <DTS:VariableValue
+        DTS:DataType="7">10/10/2001</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{38F20E0D-1ABA-468D-8F98-46B778BFA89C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PracticeShortName">
+      <DTS:VariableValue
+        DTS:DataType="8">EMR</DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Batch Entry"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Add records to batch log table"
+      DTS:DTSID="{127413a1-ddfc-4a37-b708-3cb0ba737c0a}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Batch Entry"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1AECDEB1-DE3D-43B4-B2FB-D8977A4BD016}"
+          SQLTask:SqlStatementSource="DECLARE @ETLBatchTS datetime = getdate();&#xA;DECLARE @PracticeName VARCHAR(20) =?&#xA;&#xA;&#xA;&#xA;INSERT INTO BatchLog&#xA;(StartDateTime, [Status], [Source], [FileName])&#xA;SELECT @ETLBatchTS, 'S', @PracticeName, null;&#xA;SELECT @@IDENTITY AS 'ETLBatchID', @ETLBatchTS AS 'ETLBatchTS'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ETLBatchID"
+            SQLTask:DtsVariableName="User::ETLBatchId" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="ETLBatchTS"
+            SQLTask:DtsVariableName="User::ETLBatchTS" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PracticeShortName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DW Transfer"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{71005efb-f6ee-424a-a8ed-3a99322843cb}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DW Transfer"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{589DF859-33AB-4C27-ACFA-92373364397D}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ods"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{f5f5d7b3-523d-4ce8-8216-b817316c5a5e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ods"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6F0586C1-CB89-4B97-B214-41F7CF47793F}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\RCO Demographic"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{00840BDC-4515-4F06-8F18-9BC914DE88F9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="RCO Demographic"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Stage"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{a8092ebc-bd8b-49bd-a461-55770a4acce2}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:FailParentOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stage"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Stage.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{4af5b0e6-1f30-46a0-9a7a-4526a39b3644}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{2400d32f-34fd-4414-af52-a16230846407}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Stage.EventHandlers[OnError]\Log Error into ETLBatchError on Stage package failure"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{c07d8dbd-61f5-498f-b3dd-d2bb883af5ab}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Log Error into ETLBatchError on Stage package failure">
+              <DTS:Variables />
+              <DTS:PropertyExpression
+                DTS:Name="SqlStatementSource">"insert into ETLBatchError values ("+ (DT_WSTR,12) @[User::ETLBatchId] +" , getdate(), '"+ replace(@[System::ErrorDescription],"'","") +"' )"</DTS:PropertyExpression>
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{E80D7904-196A-4E1F-A34D-0B72700C2269}"
+                  SQLTask:SqlStatementSource="insert into ETLBatchError values (0 , getdate(), '' )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Stage.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{822F961B-18B9-4338-B3CF-580A957BEF21}"
+      DTS:From="Package\Create Batch Entry"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{3C556B54-507F-41BE-8A11-486DE0CC3B50}"
+      DTS:From="Package\Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Ods" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{C9FB366E-CE6E-45B8-BF7E-D67FE20705D3}"
+      DTS:From="Package\Ods"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DW Transfer" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA5C3330-9D2F-4910-9F87-6C15D4B0B0BA}"
+      DTS:From="Package\DW Transfer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\RCO Demographic" />
+  </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
       DTS:refId="Package.EventHandlers[OnError]"
@@ -96,6 +323,122 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Stage"
+          TopLeft="263,83" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Ods"
+          TopLeft="264,172" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\DW Transfer"
+          TopLeft="250,270" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="315.25,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="317,214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\RCO Demographic"
+          TopLeft="237,349" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="321.75,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Create Batch Entry"
+          TopLeft="233,14" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="318,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
   <DtsEventHandler
     design-time-name="Package.EventHandlers[OnError]">
     <LayoutInfo>
@@ -105,6 +448,18 @@
           Size="341,42"
           Id="Package.EventHandlers[OnError]\Log Error into ETLBatchError on Main package failure"
           TopLeft="421,106" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package\Stage.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="345,42"
+          Id="Package\Stage.EventHandlers[OnError]\Log Error into ETLBatchError on Stage package failure"
+          TopLeft="358,113" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
