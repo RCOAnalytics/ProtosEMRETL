@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{CA06609E-7678-4DDB-867F-C6DFCCB9D974}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{8B8ACE66-08B1-4CCC-B736-D76D6341C7EA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACUTxqjw7zykdstCADuNOqxAAAAAASAAACgAAAAEAAAAEnbDRf7Z1IS2uSYZijwG0oYAAAAo+NSGiHA58zoNpwIqTy+WjAYnfWEt+YkFAAAACMixXG0KQKSk+kYu23ue2sBam9L</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABm15e3IDSlPWftuFaSaRU9AAAAAASAAACgAAAAEAAAAOOCVyF1S4mzDAkf9xpHpHcYAAAAnvKwcIYFa1aZ1PjzTgIgEJ46B8U5leLuFAAAALv5bhmQcym1I2PA25UAVBuaELJH</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -50,7 +50,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAFvGnENgephPGpSIIoL5HrAAAAAASAAACgAAAAEAAAAA2koQqXCmjuTGT0r/idbHkYAAAAI0p2jHBiaSxkRHrqPcHLra4IzuGL8UoeFAAAAB8LmZRV6EXt+7Wu/EKqygdsJPr8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAxwYLScCqRL+3p6jBhlld7AAAAAASAAACgAAAAEAAAAOQnBESzRGU+kozTElzGoBkYAAAA/6tLgMFwLxCKIFdXha1jzMrYgfWAGfC8FAAAAOiApna0TPMXKGHHOeA3YL5fHXbj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -69,7 +69,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACu1gUX0XAm0B4b98cjPd1NAAAAAASAAACgAAAAEAAAAFRZnNoytEdHBJ8r9umrm2AYAAAAgU9PpzpIGu80yXq9ps3b360VfB3kc6HNFAAAAIxQTjUVi2hhPi8ZYrYc6ZMQwleW</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABM+GpQJ/CfbwN17mnYB6o8AAAAAASAAACgAAAAEAAAALly0esBlMxmWHDCv0clG0QYAAAAQKgr421F2BpHAXSL34smKaXc5d79hh4YFAAAAEh09axaPHYfXdV2nKDbqsNnE96Q</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -201,7 +201,7 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{1AECDEB1-DE3D-43B4-B2FB-D8977A4BD016}"
-                  SQLTask:SqlStatementSource="DECLARE @ETLBatchTS datetime = getdate();&#xA;DECLARE @PracticeName VARCHAR(20) =?&#xA;&#xA;&#xA;&#xA;INSERT INTO BatchLog&#xA;(StartDateTime, [Status], [Source], [FileName])&#xA;SELECT @ETLBatchTS, 'S', @PracticeName, null;&#xA;SELECT @@IDENTITY AS 'ETLBatchID', @ETLBatchTS AS 'ETLBatchTS'"
+                  SQLTask:SqlStatementSource="DECLARE @ETLBatchTS datetime = getdate();&#xA;DECLARE @PracticeName VARCHAR(20) =?&#xA;DECLARE @FileDate VARCHAR(20) =?&#xA;&#xA;&#xA;&#xA;INSERT INTO BatchLog&#xA;(StartDateTime, [Status], [Source], [FileName])&#xA;SELECT @ETLBatchTS, 'S', @PracticeName,@FileDate;&#xA;SELECT @@IDENTITY AS 'ETLBatchID', @ETLBatchTS AS 'ETLBatchTS'"
                   SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ResultBinding
                     SQLTask:ResultName="ETLBatchID"
@@ -212,6 +212,12 @@
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
                     SQLTask:DtsVariableName="User::PracticeShortName"
+                    SQLTask:ParameterDirection="Input"
+                    SQLTask:DataType="129"
+                    SQLTask:ParameterSize="-1" />
+                  <SQLTask:ParameterBinding
+                    SQLTask:ParameterName="1"
+                    SQLTask:DtsVariableName="User::FileDate"
                     SQLTask:ParameterDirection="Input"
                     SQLTask:DataType="129"
                     SQLTask:ParameterSize="-1" />
@@ -1765,7 +1771,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="163,42"
           Id="Package\Foreach Loop Container\Get List Of Dates"
-          TopLeft="15.5,5.5" />
+          TopLeft="88.5,13.5" />
         <NodeLayout
           Size="172,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\Create Batch Entry"
@@ -1877,24 +1883,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="183,510"
-          Size="183,554"
+          PanelSize="270,510"
+          Size="270,553"
           Id="Package\Foreach Loop Container\Foreach Loop Container"
-          TopLeft="5.50000000000007,107.5" />
+          TopLeft="36.5000000000001,104.5" />
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
-          TopLeft="97.0000000000001,47.5">
+          TopLeft="170.75,55.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,49"
               Start="0,0"
-              End="0,52.5">
+              End="0,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1906,28 +1912,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="194,716"
-          Size="194,760"
+          PanelSize="348,716"
+          Size="348,759"
           Id="Package\Foreach Loop Container"
           TopLeft="23.5000000000001,107.5" />
         <NodeLayout
           Size="230,42"
           Id="Package\Get List Of HJ Practice Folders"
-          TopLeft="5.5,5.5" />
+          TopLeft="49.5,17.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="120.5,47.5">
+          TopLeft="164.5,59.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="33.0000000000001,48"
               Start="0,0"
-              End="0,52.5">
+              End="33.0000000000001,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="29.0000000000001,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.0000000000001,24"
+                    Point2="33.0000000000001,24"
+                    Point3="33.0000000000001,28" />
+                  <mssgle:LineSegment
+                    End="33.0000000000001,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
