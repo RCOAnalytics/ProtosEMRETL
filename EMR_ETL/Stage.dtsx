@@ -6,13 +6,14 @@
   DTS:CreatorComputerName="PH-DEV-30"
   DTS:CreatorName="GNS\Smerukar"
   DTS:DTSID="{C6B2A9C5-0228-4497-A25E-1424560E5DD7}"
+  DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.521.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{3EBE3706-AA38-454D-8D9A-6AC67C2F6135}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{F0196228-1E93-49A1-9AED-105E112C0BB4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +22,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{86B9DA20-C122-4907-93D2-BC70CBC6CA58}"
       DTS:ObjectName="EMRFile_Appointments">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Working_Folder]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +33,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\unzip\PatientLoadFromEMRFile_Appointments_2022Nov22.csv">
+          DTS:ConnectionString="F:\Mockup_Files">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +42,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Practice_ShortName"
-              DTS:DTSID="{6F2349C2-AFB7-4F2B-B6AB-59E999FE1BE8}"
+              DTS:DTSID="{8F75F0D0-5973-446A-B1E7-6FD83551DBF5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Appointment_ID"
-              DTS:DTSID="{F1F07794-6D3C-42BD-881D-7A23BD7DE45E}"
+              DTS:DTSID="{E6DAFF8E-66E1-4B95-867E-85DC909CC0E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Patient_ID"
-              DTS:DTSID="{6C44EB1E-CA12-4EC5-9E83-F36C6260A30E}"
+              DTS:DTSID="{FDE72FA6-6C27-41FE-BC88-022D0313B550}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Appointment_Date"
-              DTS:DTSID="{5E1F0DCD-01FD-4196-9EAB-1B4825ABE34A}"
+              DTS:DTSID="{BA3E3F62-9539-4604-98E9-387F9076C5D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Appointment_Type_Name"
-              DTS:DTSID="{93868685-F780-4223-8564-E339645FD9A7}"
+              DTS:DTSID="{697C4066-6469-4A7F-BC0D-D1A80E92B47C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Appointment_Status"
-              DTS:DTSID="{4A70E5D6-3075-4992-8462-53EE3C38B9E0}"
+              DTS:DTSID="{7430C072-2093-4B44-9DDE-85C18C848782}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Duration"
-              DTS:DTSID="{A203AC1C-8DB7-44B9-9C2D-68BC5859A921}"
+              DTS:DTSID="{C24AC280-744F-4BDB-91FA-74C280058032}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Office_ID"
-              DTS:DTSID="{1B768254-1620-4DE8-8AA8-6B83026FC577}"
+              DTS:DTSID="{0C9FB1B6-F151-43C2-905E-EA7D8AE45BCF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Office_Name"
-              DTS:DTSID="{9D933218-BDD9-44ED-9EAB-6EFC290549B3}"
+              DTS:DTSID="{508DC0A7-FF05-46AA-AC7C-1BA277147B56}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Provider_ID"
-              DTS:DTSID="{B41B7379-D01C-4F2F-8A37-D9D19A4F82F6}"
+              DTS:DTSID="{D2331779-1221-4451-949A-98F4DCE18704}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Provider_Name"
-              DTS:DTSID="{751FD6BB-D089-4C2B-B32B-326859566CF5}"
+              DTS:DTSID="{0833E470-04E1-4852-B25C-F5DD8A2D3595}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Appointment_Scheduled_Date"
-              DTS:DTSID="{65FA51E3-F98F-46FE-A7A8-4B80C012874C}"
+              DTS:DTSID="{05885B81-54EE-4E75-BDCA-F1EAA02483D4}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -149,6 +152,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{FC065798-8ADB-49CC-A4B6-9BADB84B2F09}"
       DTS:ObjectName="EMRFile_Demographics">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Working_Folder]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -158,7 +163,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\unzip\PatientLoadFromEMRFile_Demographics_2022Nov22.csv">
+          DTS:ConnectionString="F:\Mockup_Files">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -394,6 +399,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{C896EC01-600E-4E24-90BA-ACCEA140DC27}"
       DTS:ObjectName="EMRFile_Insurance">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Working_Folder]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -403,7 +410,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\unzip\PatientLoadFromEMRFile_Insurance_2022Nov22.csv">
+          DTS:ConnectionString="F:\Mockup_Files">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -495,6 +502,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{06FABFB7-C428-4E6B-A8C7-60839055F2C6}"
       DTS:ObjectName="EMRFile_LabResults">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Working_Folder]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -504,7 +513,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\unzip\PatientLoadFromEMRFile_Labs_2022Nov22.csv">
+          DTS:ConnectionString="F:\Mockup_Files">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -606,12 +615,46 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACcYTqC9kRJ29jyF7cwpbIeAAAAAASAAACgAAAAEAAAAANPqMO49+wOhAwvJR64CxMYAAAAGmFyvHbgnRx1533d+Nr+7U60ZQLwmTELFAAAAB7V43dLx/O31WAfhXjVjt++11jh</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADNYmA0EIGQa4mgSH4rn66tAAAAAASAAACgAAAAEAAAAGjFr/iH55UGwpHBc5dH8NMYAAAAG+wqkvmugCl6Rl4EyP34CQvjpcr18Co2FAAAAJAL198SfCMl/IdfzW6MzWlRV8oJ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="FileDate"
+      DTS:ConfigurationVariable="\Package.Variables[User::FileDate].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{2BAD0E50-632F-4A24-AC8C-70C9F4B55BB3}"
+      DTS:ObjectName="Config_FileDate" />
+    <DTS:Configuration
+      DTS:ConfigurationString="PracticeShortName"
+      DTS:ConfigurationVariable="\Package.Variables[User::PracticeShortName].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{FCFE2695-71C5-4B78-95F7-4227EE9949A7}"
+      DTS:ObjectName="Config_PracticeShortName" />
+  </DTS:Configurations>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5D0E4A24-31A0-4BDC-B715-C3DD456AB025}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileDate">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E8998C25-2DA2-4D82-B86D-ED76C277A631}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PracticeShortName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{45F86C7D-C91B-41F9-BB78-D68D378A16A5}"
@@ -642,6 +685,15 @@
           Language="CSharp"
           ReadOnlyVariables="$Project::Working_Folder"
           ReadWriteVariables="User::PresentFileList">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -761,35 +813,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_28af279b6ba64bca92f6fdf63eb84bec.Properties.Settings.get_Default():ST_28af279b6ba64bca92f6fdf63eb84bec.Properties.Sett" +
-    "ings")]
-
-namespace ST_28af279b6ba64bca92f6fdf63eb84bec.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1032,6 +1055,35 @@ namespace ST_28af279b6ba64bca92f6fdf63eb84bec
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_28af279b6ba64bca92f6fdf63eb84bec.Properties.Settings.get_Default():ST_28af279b6ba64bca92f6fdf63eb84bec.Properties.Sett" +
+    "ings")]
+
+namespace ST_28af279b6ba64bca92f6fdf63eb84bec.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1061,15 +1113,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1688,6 +1731,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Practice_ShortName as parameter"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="15"
+                          lineageId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          name="Practice_ShortName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::PracticeShortName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::PracticeShortName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\EMRFile_Appointments\STAGE_EMRFile_Appointments"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1849,12 +1967,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           lineageId="Package\Sequence Container\EMRFile_Appointments\EMRFile_Appointments.Outputs[Flat File Source Output].Columns[Appointment_Scheduled_Date]" />
                         <inputColumn
                           refId="Package\Sequence Container\EMRFile_Appointments\STAGE_EMRFile_Appointments.Inputs[OLE DB Destination Input].Columns[Practice_ShortName]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="15"
+                          cachedDataType="wstr"
                           cachedName="Practice_ShortName"
                           externalMetadataColumnId="Package\Sequence Container\EMRFile_Appointments\STAGE_EMRFile_Appointments.Inputs[OLE DB Destination Input].ExternalColumns[Practice_ShortName]"
-                          lineageId="Package\Sequence Container\EMRFile_Appointments\EMRFile_Appointments.Outputs[Flat File Source Output].Columns[Practice_ShortName]" />
+                          lineageId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1961,8 +2077,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </components>
               <paths>
                 <path
-                  refId="Package\Sequence Container\EMRFile_Appointments.Paths[Flat File Source Output]"
+                  refId="Package\Sequence Container\EMRFile_Appointments.Paths[Derived Column Output]"
                   endId="Package\Sequence Container\EMRFile_Appointments\STAGE_EMRFile_Appointments.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\EMRFile_Appointments.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\Sequence Container\EMRFile_Appointments\EMRFile_Appointments.Outputs[Flat File Source Output]" />
               </paths>
@@ -2752,6 +2873,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Practice_ShortName as parameter"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="15"
+                          lineageId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          name="Practice_ShortName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::PracticeShortName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::PracticeShortName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\EMRFile_Demographics\STAGE_EMRFile_Demographics"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -3022,7 +3218,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           cachedLength="15"
                           cachedName="Practice_ShortName"
                           externalMetadataColumnId="Package\Sequence Container\EMRFile_Demographics\STAGE_EMRFile_Demographics.Inputs[OLE DB Destination Input].ExternalColumns[Practice_ShortName]"
-                          lineageId="Package\Sequence Container\EMRFile_Demographics\EMRFile_Demographics.Outputs[Flat File Source Output].Columns[Practice_ShortName]" />
+                          lineageId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -3207,8 +3403,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </components>
               <paths>
                 <path
-                  refId="Package\Sequence Container\EMRFile_Demographics.Paths[Flat File Source Output]"
+                  refId="Package\Sequence Container\EMRFile_Demographics.Paths[Derived Column Output]"
                   endId="Package\Sequence Container\EMRFile_Demographics\STAGE_EMRFile_Demographics.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\EMRFile_Demographics.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\Sequence Container\EMRFile_Demographics\EMRFile_Demographics.Outputs[Flat File Source Output]" />
               </paths>
@@ -3550,6 +3751,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Practice_ShortName as parameter"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="15"
+                          lineageId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          name="Practice_ShortName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::PracticeShortName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::PracticeShortName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\EMRFile_Insurance\STAGE_EMRFile_Insurance"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -3692,7 +3968,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           cachedLength="15"
                           cachedName="Practice_ShortName"
                           externalMetadataColumnId="Package\Sequence Container\EMRFile_Insurance\STAGE_EMRFile_Insurance.Inputs[OLE DB Destination Input].ExternalColumns[Practice_ShortName]"
-                          lineageId="Package\Sequence Container\EMRFile_Insurance\EMRFile_Insurance.Outputs[Flat File Source Output].Columns[Practice_ShortName]" />
+                          lineageId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -3781,8 +4057,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </components>
               <paths>
                 <path
-                  refId="Package\Sequence Container\EMRFile_Insurance.Paths[Flat File Source Output]"
+                  refId="Package\Sequence Container\EMRFile_Insurance.Paths[Derived Column Output]"
                   endId="Package\Sequence Container\EMRFile_Insurance\STAGE_EMRFile_Insurance.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\EMRFile_Insurance.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\Sequence Container\EMRFile_Insurance\EMRFile_Insurance.Outputs[Flat File Source Output]" />
               </paths>
@@ -4124,6 +4405,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Practice_ShortName as parameter"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="15"
+                          lineageId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]"
+                          name="Practice_ShortName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::PracticeShortName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::PracticeShortName]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\EMRFile_LabResults\STAGE_EMRFile_LabResults"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4266,7 +4622,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                           cachedLength="15"
                           cachedName="Practice_ShortName"
                           externalMetadataColumnId="Package\Sequence Container\EMRFile_LabResults\STAGE_EMRFile_LabResults.Inputs[OLE DB Destination Input].ExternalColumns[Practice_ShortName]"
-                          lineageId="Package\Sequence Container\EMRFile_LabResults\EMRFile_LabResults.Outputs[Flat File Source Output].Columns[Practice_ShortName]" />
+                          lineageId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Output].Columns[Practice_ShortName]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -4355,8 +4711,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               </components>
               <paths>
                 <path
-                  refId="Package\Sequence Container\EMRFile_LabResults.Paths[Flat File Source Output]"
+                  refId="Package\Sequence Container\EMRFile_LabResults.Paths[Derived Column Output]"
                   endId="Package\Sequence Container\EMRFile_LabResults\STAGE_EMRFile_LabResults.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\EMRFile_LabResults.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\Sequence Container\EMRFile_LabResults\EMRFile_LabResults.Outputs[Flat File Source Output]" />
               </paths>
@@ -4439,23 +4800,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="203,42"
+          Size="203.2,41.6"
           Id="Package\Get Available File Names"
           TopLeft="488,103" />
         <NodeLayout
-          Size="195,42"
+          Size="195.2,41.6"
           Id="Package\Sequence Container\EMRFile_Appointments"
           TopLeft="63,35" />
         <NodeLayout
-          Size="198,42"
+          Size="198.4,41.6"
           Id="Package\Sequence Container\EMRFile_Demographics"
           TopLeft="65,108" />
         <NodeLayout
-          Size="176,42"
+          Size="176,41.6"
           Id="Package\Sequence Container\EMRFile_Insurance"
           TopLeft="107,180" />
         <NodeLayout
-          Size="182,42"
+          Size="182.4,41.6"
           Id="Package\Sequence Container\EMRFile_LabResults"
           TopLeft="97,239" />
         <EdgeLayout
@@ -4551,12 +4912,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="338,339"
-          Size="338,382"
+          PanelSize="337.6,339.2"
+          Size="337.6,382.4"
           Id="Package\Sequence Container"
           TopLeft="471,178" />
         <NodeLayout
-          Size="190,42"
+          Size="190.4,41.6"
           Id="Package\Truncate Stage Tables"
           TopLeft="486,31" />
         <EdgeLayout
@@ -4634,41 +4995,79 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Sequence Container\EMRFile_Appointments">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="238,42"
+          Size="238.4,41.6"
           Id="Package\Sequence Container\EMRFile_Appointments\STAGE_EMRFile_Appointments"
-          TopLeft="377,196" />
+          TopLeft="351,277" />
         <NodeLayout
-          Size="195,42"
+          Size="195.2,41.6"
           Id="Package\Sequence Container\EMRFile_Appointments\EMRFile_Appointments"
           TopLeft="375,70" />
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Sequence Container\EMRFile_Appointments\Practice_ShortName as parameter"
+          TopLeft="403,175" />
         <EdgeLayout
           Id="Package\Sequence Container\EMRFile_Appointments.Paths[Flat File Source Output]"
-          TopLeft="472.5,112">
+          TopLeft="472.6,111.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.5,84"
+              EndConnector="37.2,63.3999999999999"
               Start="0,0"
-              End="23.5,76.5">
+              End="37.2,55.8999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="0,27.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="4,42" />
+                    Point1="0,27.7"
+                    Point2="0,31.7"
+                    Point3="4,31.7" />
                   <mssgle:LineSegment
-                    End="19.5,42" />
+                    End="33.2,31.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.5,42"
-                    Point2="23.5,42"
-                    Point3="23.5,46" />
+                    Point1="33.2,31.7"
+                    Point2="37.2,31.7"
+                    Point3="37.2,35.7" />
                   <mssgle:LineSegment
-                    End="23.5,76.5" />
+                    End="37.2,55.8999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\EMRFile_Appointments.Paths[Derived Column Output]"
+          TopLeft="509.8,216.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39.6,60.4000000000001"
+              Start="0,0"
+              End="-39.6,52.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2"
+                    Point2="0,30.2"
+                    Point3="-4,30.2" />
+                  <mssgle:LineSegment
+                    End="-35.6,30.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.6,30.2"
+                    Point2="-39.6,30.2"
+                    Point3="-39.6,34.2" />
+                  <mssgle:LineSegment
+                    End="-39.6,52.9000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4697,41 +5096,79 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Sequence Container\EMRFile_Demographics">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="242,42"
+          Size="241.6,41.6"
           Id="Package\Sequence Container\EMRFile_Demographics\STAGE_EMRFile_Demographics"
-          TopLeft="553,211" />
+          TopLeft="451,300" />
         <NodeLayout
-          Size="198,42"
+          Size="198.4,41.6"
           Id="Package\Sequence Container\EMRFile_Demographics\EMRFile_Demographics"
           TopLeft="475,82" />
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Sequence Container\EMRFile_Demographics\Practice_ShortName as parameter"
+          TopLeft="510,190" />
         <EdgeLayout
           Id="Package\Sequence Container\EMRFile_Demographics.Paths[Flat File Source Output]"
-          TopLeft="574,124">
+          TopLeft="574.2,123.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="100,87"
+              EndConnector="42.5999999999999,66.4"
               Start="0,0"
-              End="100,79.5">
+              End="42.5999999999999,58.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="0,29.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.5"
-                    Point2="0,43.5"
-                    Point3="4,43.5" />
+                    Point1="0,29.2"
+                    Point2="0,33.2"
+                    Point3="4,33.2" />
                   <mssgle:LineSegment
-                    End="96,43.5" />
+                    End="38.5999999999999,33.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="96,43.5"
-                    Point2="100,43.5"
-                    Point3="100,47.5" />
+                    Point1="38.5999999999999,33.2"
+                    Point2="42.5999999999999,33.2"
+                    Point3="42.5999999999999,37.2" />
                   <mssgle:LineSegment
-                    End="100,79.5" />
+                    End="42.5999999999999,58.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\EMRFile_Demographics.Paths[Derived Column Output]"
+          TopLeft="616.8,231.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-44.9999999999999,68.4"
+              Start="0,0"
+              End="-44.9999999999999,60.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.2"
+                    Point2="0,34.2"
+                    Point3="-4,34.2" />
+                  <mssgle:LineSegment
+                    End="-40.9999999999999,34.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.9999999999999,34.2"
+                    Point2="-44.9999999999999,34.2"
+                    Point3="-44.9999999999999,38.2" />
+                  <mssgle:LineSegment
+                    End="-44.9999999999999,60.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4760,41 +5197,79 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Sequence Container\EMRFile_Insurance">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
+          Size="219.2,41.6"
+          Id="Package\Sequence Container\EMRFile_Insurance\STAGE_EMRFile_Insurance"
+          TopLeft="498,318" />
+        <NodeLayout
+          Size="176,41.6"
           Id="Package\Sequence Container\EMRFile_Insurance\EMRFile_Insurance"
           TopLeft="507,90" />
         <NodeLayout
-          Size="219,42"
-          Id="Package\Sequence Container\EMRFile_Insurance\STAGE_EMRFile_Insurance"
-          TopLeft="546,223" />
+          Size="213.6,41.6"
+          Id="Package\Sequence Container\EMRFile_Insurance\Practice_ShortName as parameter"
+          TopLeft="531,216" />
         <EdgeLayout
           Id="Package\Sequence Container\EMRFile_Insurance.Paths[Flat File Source Output]"
-          TopLeft="595,132">
+          TopLeft="595,131.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.5,91"
+              EndConnector="42.8,84.4"
               Start="0,0"
-              End="60.5,83.5">
+              End="42.8,76.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.5" />
+                    End="0,38.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.5"
-                    Point2="0,45.5"
-                    Point3="4,45.5" />
+                    Point1="0,38.2"
+                    Point2="0,42.2"
+                    Point3="4,42.2" />
                   <mssgle:LineSegment
-                    End="56.5,45.5" />
+                    End="38.8,42.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="56.5,45.5"
-                    Point2="60.5,45.5"
-                    Point3="60.5,49.5" />
+                    Point1="38.8,42.2"
+                    Point2="42.8,42.2"
+                    Point3="42.8,46.2" />
                   <mssgle:LineSegment
-                    End="60.5,83.5" />
+                    End="42.8,76.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\EMRFile_Insurance.Paths[Derived Column Output]"
+          TopLeft="637.8,257.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30.2,60.4"
+              Start="0,0"
+              End="-30.2,52.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2"
+                    Point2="0,30.2"
+                    Point3="-4,30.2" />
+                  <mssgle:LineSegment
+                    End="-26.2,30.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.2,30.2"
+                    Point2="-30.2,30.2"
+                    Point3="-30.2,34.2" />
+                  <mssgle:LineSegment
+                    End="-30.2,52.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4823,41 +5298,79 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Sequence Container\EMRFile_LabResults">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182,42"
+          Size="225.6,41.6"
+          Id="Package\Sequence Container\EMRFile_LabResults\STAGE_EMRFile_LabResults"
+          TopLeft="577,310" />
+        <NodeLayout
+          Size="182.4,41.6"
           Id="Package\Sequence Container\EMRFile_LabResults\EMRFile_LabResults"
           TopLeft="582,77" />
         <NodeLayout
-          Size="226,42"
-          Id="Package\Sequence Container\EMRFile_LabResults\STAGE_EMRFile_LabResults"
-          TopLeft="639,201" />
+          Size="213.6,41.6"
+          Id="Package\Sequence Container\EMRFile_LabResults\Practice_ShortName as parameter"
+          TopLeft="597,199" />
         <EdgeLayout
           Id="Package\Sequence Container\EMRFile_LabResults.Paths[Flat File Source Output]"
-          TopLeft="673,119">
+          TopLeft="673.2,118.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="79,82"
+              EndConnector="30.6,80.4"
               Start="0,0"
-              End="79,74.5">
+              End="30.6,72.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37" />
+                    End="0,36.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37"
-                    Point2="0,41"
-                    Point3="4,41" />
+                    Point1="0,36.2"
+                    Point2="0,40.2"
+                    Point3="4,40.2" />
                   <mssgle:LineSegment
-                    End="75,41" />
+                    End="26.6,40.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="75,41"
-                    Point2="79,41"
-                    Point3="79,45" />
+                    Point1="26.6,40.2"
+                    Point2="30.6,40.2"
+                    Point3="30.6,44.2" />
                   <mssgle:LineSegment
-                    End="79,74.5" />
+                    End="30.6,72.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\EMRFile_LabResults.Paths[Derived Column Output]"
+          TopLeft="703.8,240.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.0000000000002,69.4"
+              Start="0,0"
+              End="-14.0000000000002,61.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.7"
+                    Point2="0,34.7"
+                    Point3="-4,34.7" />
+                  <mssgle:LineSegment
+                    End="-10.0000000000002,34.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.0000000000002,34.7"
+                    Point2="-14.0000000000002,34.7"
+                    Point3="-14.0000000000002,38.7" />
+                  <mssgle:LineSegment
+                    End="-14.0000000000002,61.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
