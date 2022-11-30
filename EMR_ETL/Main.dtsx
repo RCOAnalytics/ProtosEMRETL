@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{D3E77B8A-84A0-4D75-A92B-FDEF556C38FA}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{9F3D1401-E987-40A2-B3BC-DBC9E40360E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/LI78IpTJq95hzSrhPt/jAAAAAASAAACgAAAAEAAAADN+6CaxI+vdOMFOw4rsq90YAAAAnYd1dqaiwqPdYQ+kKzW8GWcG9q2N/3q6FAAAAJkxXNiW/yPZlGCM4SDXgaK090AL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC5ZBSKxyjAqOb8vDJGVXtMAAAAAASAAACgAAAAEAAAANZLF2841e+kI1m/VS91ek4YAAAA7OYbmNEJ9wppx3Gz/lAQ2mC+7amkPeZpFAAAADcxsVe0HyuFIxP5Zszr+ckaX8hQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -50,7 +50,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABdPW5C1fSXrucfuGHluO/WAAAAAASAAACgAAAAEAAAAP3MMmXBG4ao+2AfsUqlgIsYAAAAh4vcgbg9Y/C+nJ073ns6NYhUYi4Hbb4oFAAAADZdl5t7Q/Azxl/7mYDSjgzvv0t2</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABo8+pW3/e5w8o3KoUDKfEsAAAAAASAAACgAAAAEAAAAM+yuXDKnLtKcsYn2gQvRbEYAAAAu5PCf/BREq6frjqR3WEPpjjRedpBiRfPFAAAAKOdo+no9cPsFumGkRWobgfbVq2H</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -69,7 +69,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAaQz4J1JAXImaS/0M3xVvtAAAAAASAAACgAAAAEAAAAHEOaKvKqCWhdPu1RrqVUpEYAAAApKD0MGUwfSjkJ1LyE79PlOWyYMiOd3GtFAAAAGl071zeq/0UA7dcSukqYzodR1Cq</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAApHs1FN0cnWS5xEnoNYhneAAAAAASAAACgAAAAEAAAAOWPIPE7yqne1EIPW5I4HZsYAAAAjUggcuuExoOQt+o3UxFLBNK4M/YYsPCoFAAAAE9NcCWn34YlHLkTYkT/1IMbihI9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -92,6 +92,16 @@
       DTS:ObjectName="ETLBatchTS">
       <DTS:VariableValue
         DTS:DataType="7">10/10/2001</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62D40A17-00D9-4D13-9766-838C982883B9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileDate">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -163,7 +173,27 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{6F0586C1-CB89-4B97-B214-41F7CF47793F}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{6F0586C1-CB89-4B97-B214-41F7CF47793F}"
+          SQLTask:SqlStatementSource="DECLARE @ETLBatchId INT = ?, @ETLBatchTS DATETIME =?, @FileDate VARCHAR(10) =?&#xA;&#xA;EXEC dbo.up_EMRFile_ODS_Demographics @ETLBatchId, @ETLBatchTS, @FileDate;&#xA;EXEC dbo.up_EMRFile_ODS_Insurance @ETLBatchId, @ETLBatchTS, @FileDate;&#xA;EXEC dbo.up_EMRFile_ODS_LabResults @ETLBatchId, @ETLBatchTS, @FileDate;&#xA;EXEC dbo.up_EMRFile_ODS_Appointment @ETLBatchId, @ETLBatchTS, @FileDate;&#xA;&#xA;EXEC dbo.up_EMRFile_Calc_AppointmentType_i @ETLBatchId;&#xA;EXEC dbo.up_EMRFile_Calc_Insurance_i @ETLBatchId;&#xA;EXEC dbo.up_EMRFile_Calc_Office_i @ETLBatchId;&#xA;EXEC dbo.up_EMRFile_Calc_Provider_i @ETLBatchId;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::ETLBatchId"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::ETLBatchTS"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="133"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::FileDate"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -329,17 +359,47 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="108,42"
-          Id="Package\Stage"
-          TopLeft="263,83" />
+          Size="172,42"
+          Id="Package\Create Batch Entry"
+          TopLeft="233,14" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\DW Transfer"
+          TopLeft="250,270" />
         <NodeLayout
           Size="99,42"
           Id="Package\Ods"
           TopLeft="264,172" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\DW Transfer"
-          TopLeft="250,270" />
+          Size="172,42"
+          Id="Package\RCO Demographic"
+          TopLeft="237,349" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Stage"
+          TopLeft="263,83" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="318,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="315.25,125">
@@ -384,10 +444,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\RCO Demographic"
-          TopLeft="237,349" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="321.75,312">
@@ -402,32 +458,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Create Batch Entry"
-          TopLeft="233,14" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="318,56">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
