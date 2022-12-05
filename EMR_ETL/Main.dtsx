@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{9B5FAB7D-A499-482A-BD65-236391EEB09E}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{131FBE12-35BF-4B1B-9A2D-1E0A11D7AE7B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADb219RVGW+LceNgjmyN3ZnAAAAAASAAACgAAAAEAAAAKR3j5ATs9gzyNhYRpBs//sYAAAAxI38LmjGe9x//OBov4OmJlrXIKMRX4KtFAAAAKDyBqjNWV9f5ZeVWyZ50DVFcZwl</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB/sOJqybl9wTXcSTKJLVEtAAAAAASAAACgAAAAEAAAAJFG3kiblgUUKQCrevlgqcoYAAAAleDxAv7LuVDEQJspPWHU9j7rKZEbmG4DFAAAAC3+EPVObpiKU0aiieWLQ4yfUMqS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -50,7 +50,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2UCXVHsB2/H0r9Vn9XI78AAAAAASAAACgAAAAEAAAAJLJ+T/4MOh1vyobEgEaqBIYAAAANCFIdtLAPZ8pL0QQIAJw5TZe7RQfbluAFAAAAGnPW7POe4h/Sp7FBZb5B4IpFrR9</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADqRLnQ/0EO+4ieb07MpdbrAAAAAASAAACgAAAAEAAAALjtI02NFErM8IJdpfJCcW8YAAAA8YmycXAK/GtFGhGIB5Cva2kPweYVbZ/nFAAAAAD4+aCKgJrcg5u/Wwltc/m6cchK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -69,7 +69,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB/WohbDiiVh4iV2LG956WlAAAAAASAAACgAAAAEAAAANdYp6ZqpYpanpcsQR1T81cYAAAArmBDaU0NrarB2LPuFQtVFjhWWLev7lZcFAAAANNyic2wiF948XofogYferr4i8cI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA3t1FfsYLisvqwsYQLU0TeAAAAAASAAACgAAAAEAAAAG7HiDfUnVuu8jvR09evZiEYAAAA4aR6Czuvts+q72hOiKjwRekvSyqppf3dFAAAAFf+n1UajUc55TSviln3Kc5gj9+2</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -88,7 +88,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmgxAFNmYB0S33Yrv1dtRGgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAdclHD+BhF856rKN1jrlSMAAAAAASAAACgAAAAEAAAAOkywbymKuAZKblr0dLDm9cYAAAATkbJJyZQNEKXsZBo9khHPWSEeSMJfZXfFAAAAETLrXkRo8ehtUjCCFAsnQZfK4Qy</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOjIJvctUNE+qKNVXygYFHQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAuQT2tj1LqsWMVI6RUN5sQAAAAAASAAACgAAAAEAAAAG7q+sbsNlakOb/y/jzcM9cYAAAAB5GCI2uv3Du2R6c6RxReDZ5EnZguMZ9eFAAAAM7Flspruxn1y1RJplLRWwVFcBnh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -256,7 +256,7 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{589DF859-33AB-4C27-ACFA-92373364397D}"
-                  SQLTask:SqlStatementSource="DECLARE @ETLBatchId INT = ?, @Practice_ShortName VARCHAR(15)  =?&#xA;&#xA;EXEC dbo.EMRFile_DW_Dim_Insurance @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Dim_Provider @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Dim_Office @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Dim_Patient @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Dim_AppointmentType @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Dim_Metrics @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Fact_Appointment @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Fact_Metrics @ETLBatchId, @Practice_ShortName;&#xA;EXEC dbo.EMRFile_DW_Fact_Insurance @ETLBatchId,@Practice_ShortName;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  SQLTask:SqlStatementSource="DECLARE @ETLBatchId INT = ?, @Practice_ShortName VARCHAR(15)  =?&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_Insurance', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_Insurance @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_Insurance';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_Provider', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_Provider @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_Provider';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_Office', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_Office @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_Office';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_Patient', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_Patient @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_Patient';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_AppointmentType', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_AppointmentType @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_AppointmentType';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Dim_Metrics', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Dim_Metrics @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Dim_Metrics';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Fact_Appointment', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Fact_Appointment @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Fact_Appointment';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Fact_Metrics', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Fact_Metrics @ETLBatchId, @Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Fact_Metrics';&#xA;&#xA;INSERT INTO dbo.[Audit_EMRFiles_to_DW] SELECT @ETLBatchId, 'EMRFile_DW_Fact_Insurance', getdate(), NULL&#xA;EXEC dbo.EMRFile_DW_Fact_Insurance @ETLBatchId,@Practice_ShortName;&#xA;UPDATE dbo.[Audit_EMRFiles_to_DW] SET EndTime = getdate() WHERE ETLBatchId = @ETLBatchId AND ProcCalled = 'EMRFile_DW_Fact_Insurance';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
                   <SQLTask:ParameterBinding
                     SQLTask:ParameterName="0"
                     SQLTask:DtsVariableName="User::ETLBatchId"
@@ -452,91 +452,35 @@
               ReadOnlyVariables="User::PracticeShortName,$Project::Working_Folder"
               ReadWriteVariables="User::DatesList">
               <ProjectItem
-                Name="ST_2dcafe9914514de28d2652553500dea0.csproj"
-                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{60a5cd1c-0f33-46e9-aa8e-52e1b3208631}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ST_f113f7570e64471d9213f3a0c6ff9daf</RootNamespace>
-    <AssemblyName>ST_2dcafe9914514de28d2652553500dea0</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="ScriptMain.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST140</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_f113f7570e64471d9213f3a0c6ff9daf")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_f113f7570e64471d9213f3a0c6ff9daf")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -657,14 +601,34 @@
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_f113f7570e64471d9213f3a0c6ff9daf.Properties.Settings.get_Default():ST_f113f7570e64471d9213f3a0c6ff9daf.Properties.Sett" +
+    "ings")]
+
+namespace ST_f113f7570e64471d9213f3a0c6ff9daf.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -835,64 +799,100 @@ namespace ST_f113f7570e64471d9213f3a0c6ff9daf
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_f113f7570e64471d9213f3a0c6ff9daf.Properties.Settings.get_Default():ST_f113f7570e64471d9213f3a0c6ff9daf.Properties.Sett" +
-    "ings")]
-
-namespace ST_f113f7570e64471d9213f3a0c6ff9daf.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+                Name="ST_2dcafe9914514de28d2652553500dea0.csproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60a5cd1c-0f33-46e9-aa8e-52e1b3208631}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_f113f7570e64471d9213f3a0c6ff9daf</RootNamespace>
+    <AssemblyName>ST_2dcafe9914514de28d2652553500dea0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_f113f7570e64471d9213f3a0c6ff9daf")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_f113f7570e64471d9213f3a0c6ff9daf")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1130,6 +1130,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           ReadOnlyVariables="$Project::Working_Folder"
           ReadWriteVariables="User::FolderNames">
           <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -1248,35 +1257,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_868d560021614437b52d127e084006b7.Properties.Settings.get_Default():ST_868d560021614437b52d127e084006b7.Properties.Sett" +
-    "ings")]
-
-namespace ST_868d560021614437b52d127e084006b7.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1516,6 +1496,35 @@ namespace ST_868d560021614437b52d127e084006b7
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_868d560021614437b52d127e084006b7.Properties.Settings.get_Default():ST_868d560021614437b52d127e084006b7.Properties.Sett" +
+    "ings")]
+
+namespace ST_868d560021614437b52d127e084006b7.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -1545,15 +1554,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
