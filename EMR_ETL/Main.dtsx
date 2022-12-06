@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{7C72BF06-2C35-440E-B0FF-DE1A6AEC7C98}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{A614EFDD-A15C-42C0-8A15-9022F4A87329}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           ConnectByProxy="False">
           <SasToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC2ENKPa8XytgXibknO9+bSAAAAAASAAACgAAAAEAAAAPO+0M7wSRXx4B6f6ZnGrcM4AQAAgM1s/8UE90qnS7hjtPVFBI4DIWAJnVmEiOT/GI+x6T8HV86kmiGziG5h3eTF6S72e59ycz/7Z1kUlaoCizFOh4rkgGX1nxmsC25qqeP41fgQDi4fKSCE6mkuH3L//9nN9FU23f4+OaGjiKQaGQyd5+3zoCxDjV7Dii2JCw2lgJU/a0t84Qq90W+NB0Q1uvbgaj+ndiaUP3sTFgnLFNRy5VKOEGjqSmLy3BYyVWJ45JtP5Cp2FONSQiLUN08vCEKqr3pWeTvM9vtHPywg1D9KeWzy+C2K2F3/sphdMCmeVD+c9I2bhOjn987lg7qhyV2ga6fahLXcxCz4R5YUhvhhD+pl4bTnFcaeZGNGr3rXHGFO1ZZiGZHb289K8+dW8PwVMRy2G2HjxcaI6SzTMfmi6bEFhRiY6zRWFAAAAM0ujz1BoQlol07/0HD2pnE2SHTv</SasToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADKSkk7sovX6SQ5gkCWipG6AAAAAASAAACgAAAAEAAAAMQShZhGG9kAAJtTFUAf4qM4AQAAKd5lk6BaBzSl2R4sIEayp5gyv8bv5HyKNpBdXf6AA2GG4e5tQN+WT4QkOMD7qs7mxq4zIf0AtTwa1oZvcK5QcLbfdZjEw60l7VGcbqG6gPTPjWbmbQGVbeWD6S0ZeLaYv6IZsIwYjErdDhv83oGxkDuRZrnS/4rTvsoqHD0Q4CgLrhi63DAmNF+azUQKgpVXiyCIFVJQL2U9LLLoXzuPlDQCXSUUN1yOLuucPNpcDm+FMj4qkZJmhY8veXrgE31iKZ0FS8TotyOwAjRw96uYk56/Pqi+TMvIKiI68i6700HAkehsRACUmbjZpAwMmDHcqd0scDDuPU+Isa85usT/HKSiTh4QipAsKbKDtYZkzgjju75KqiPPiERovp4mjESPzfflQ4eSex2jUJNBq+DcZXTARKaSvinXFAAAANqVU5c6XNKBxii7dQtOn4HiXYm1</SasToken>
         </AzureStorageConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -41,13 +41,13 @@
       DTS:DTSID="{1AECDEB1-DE3D-43B4-B2FB-D8977A4BD016}"
       DTS:ObjectName="LoggingDB">
       <DTS:PropertyExpression
-        DTS:Name="InitialCatalog">@[$Project::LoggingDB_DB_Name]</DTS:PropertyExpression>
+        DTS:Name="InitialCatalog">@[$Project::loggingdb_db_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="Password">@[$Project::LoggingDB_Password]</DTS:PropertyExpression>
+        DTS:Name="Password">@[$Project::db_password]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="ServerName">@[$Project::DB_Server_Name]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::db_server_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="UserName">@[$Project::LoggingDB_Username]</DTS:PropertyExpression>
+        DTS:Name="UserName">@[$Project::db_username]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -56,7 +56,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/703NkayxpyvdtoQUtaQVAAAAAASAAACgAAAAEAAAANV8zpL+uaZrtXlurcBXiDIYAAAAvpGO+P/x1uVnOx4aStgBIlq2VVQJk6eoFAAAAMTEh4ObBgu9kGYf5dgoLkVDgvu+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAKMC0AiDy+jubc8bVoTN/mAAAAAASAAACgAAAAEAAAAIuqy47U887iB+tYz28EMtgYAAAAg2wC9GNd/Z8mr/ZxJhU9KDWEhP/WDWIjFAAAAAIqlz2GfDgBE57lquimIWRZqvpz</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -66,13 +66,13 @@
       DTS:DTSID="{751DA957-8217-4EC5-A82D-EF1C46A6E95B}"
       DTS:ObjectName="RCO_Demographic">
       <DTS:PropertyExpression
-        DTS:Name="InitialCatalog">@[$Project::RCOA_Demographics_DB_Name]</DTS:PropertyExpression>
+        DTS:Name="InitialCatalog">@[$Project::rcoa_demographics_db_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="Password">@[$Project::RCOA_Demographics_Password]</DTS:PropertyExpression>
+        DTS:Name="Password">@[$Project::db_password]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="ServerName">@[$Project::DB_Server_Name]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::db_server_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="UserName">@[$Project::RCOA_Demographics_Username]</DTS:PropertyExpression>
+        DTS:Name="UserName">@[$Project::db_username]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -81,7 +81,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACYSXIsSFyszDfOseVFz+vJAAAAAASAAACgAAAAEAAAAENQ3abWoBwNkjHF9QmQX/4YAAAAeJxhZnVcuJxYAaiw4G5hxr0jlo3KMTzKFAAAACFEbVqPyw1VSyRMuk3daO8Yzgzq</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABDOm9ZqpKm0YgWlyNhCw1TAAAAAASAAACgAAAAEAAAAJHSGQyIh8JUiDbum0u8pq0YAAAAfsHIWdD5wcTFWHAdnpCR3b5syyMG3snJFAAAAOoU6sscZFLAEpUaCQcD/UdaK3PN</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -91,13 +91,13 @@
       DTS:DTSID="{589DF859-33AB-4C27-ACFA-92373364397D}"
       DTS:ObjectName="RCO_DW">
       <DTS:PropertyExpression
-        DTS:Name="InitialCatalog">@[$Project::RCO_DW_DB_Name]</DTS:PropertyExpression>
+        DTS:Name="InitialCatalog">@[$Project::rco_dw_db_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="Password">@[$Project::RCO_DW_Password]</DTS:PropertyExpression>
+        DTS:Name="Password">@[$Project::db_password]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="ServerName">@[$Project::DB_Server_Name]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::db_server_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="UserName">@[$Project::RCO_DW_Username]</DTS:PropertyExpression>
+        DTS:Name="UserName">@[$Project::db_username]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -106,7 +106,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2JM+DQ+gBMSb5hYconDksAAAAAASAAACgAAAAEAAAAEmcZZrKBgPJ88tyfst1iwcYAAAAjUM3QNPv5TNXJZzrW+v3U+U3byz2OPYpFAAAAA0B/t2u8tvHt67wb3eKURQWBgRO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAwzc9xbg7Qg2aTbbP0ff2jAAAAAASAAACgAAAAEAAAAPzvTtaFVrK5nD6WJfMxfcoYAAAAT48Z7ETvPXkoCIKTDrR908PxkozCN/xWFAAAANeqkm1DhlR0gtsdpKVOg+v+zqyl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -116,13 +116,13 @@
       DTS:DTSID="{6F0586C1-CB89-4B97-B214-41F7CF47793F}"
       DTS:ObjectName="RCO_Ods DB">
       <DTS:PropertyExpression
-        DTS:Name="InitialCatalog">@[$Project::RCO_ODS_DB_Name]</DTS:PropertyExpression>
+        DTS:Name="InitialCatalog">@[$Project::rco_ods_db_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="Password">@[$Project::RCO_ODS_Password]</DTS:PropertyExpression>
+        DTS:Name="Password">@[$Project::db_password]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="ServerName">@[$Project::DB_Server_Name]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::db_server_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="UserName">@[$Project::RCO_ODS_Username]</DTS:PropertyExpression>
+        DTS:Name="UserName">@[$Project::db_username]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -131,7 +131,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB8n3fWJsb6B8Qme9QUw02FAAAAAASAAACgAAAAEAAAABhCUlik+XZ5s9wfVDBj+DUYAAAAXiFfkiqUOGAOvo6Iv7Bg/DD97Glq1yZqFAAAAHHMQ2GqJwTZ1d8rZ6+NyMbhpkym</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACMWQGr5HZzdy3WiK398ChIAAAAAASAAACgAAAAEAAAACF71WV2eXBEcp7lYJEU0S0YAAAAarm5AgBN6J6h3lM90SpH05pyUan9bpIjFAAAAIHbtl7/ixulB7gN+5NcgGl3XQu9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -189,8 +189,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileDate">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="8">20221106</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -275,6 +274,64 @@
       </DTS:ForEachEnumerator>
       <DTS:Variables />
       <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Flexible File Copy"
+          DTS:CreationName="ExtensibleFileTask"
+          DTS:Description="Flexible File Task"
+          DTS:DTSID="{2CC6093F-2B74-4AF2-A71C-3596C14DE8FC}"
+          DTS:ExecutableType="ExtensibleFileTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Flexible File Copy"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="DestinationFolderPath">"emr-file-patient-load/archieve/" + @[User::PracticeShortName]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="SourceFileName">"*"+ @[User::FileDate] + ".csv"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="SourceFolderPath">"emr-file-patient-load/source/" +  @[User::PracticeShortName]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExtensibleFileTask
+              Operation="Copy"
+              SourceConnectionType="AzureStorage"
+              SourceConnectionId="{7ACC443F-9A43-42E1-88A4-D5C5DD8B0BE3}"
+              SourceFolderPath="emr-file-patient-load/source/EMR"
+              SourceFileName="*20221106.csv"
+              SearchRecursively="False"
+              DestinationConnectionType="AzureStorage"
+              DestinationConnectionId="{7ACC443F-9A43-42E1-88A4-D5C5DD8B0BE3}"
+              DestinationFolderPath="emr-file-patient-load/archieve/EMR"
+              ConnectionType="LocalFileSystem"
+              DeleteRecursively="False" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Flexible File Delete"
+          DTS:CreationName="ExtensibleFileTask"
+          DTS:Description="Flexible File Task"
+          DTS:DTSID="{39B19475-CE74-48D4-83A6-E549B21FAD11}"
+          DTS:ExecutableType="ExtensibleFileTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Flexible File Delete"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="FileName">"*" +  @[User::FileDate] + ".csv"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="FolderPath">"emr-file-patient-load/source/" +  @[User::PracticeShortName]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExtensibleFileTask
+              Operation="Delete"
+              SourceConnectionType="LocalFileSystem"
+              SearchRecursively="False"
+              DestinationConnectionType="LocalFileSystem"
+              ConnectionType="AzureStorage"
+              ConnectionId="{7ACC443F-9A43-42E1-88A4-D5C5DD8B0BE3}"
+              FolderPath="emr-file-patient-load/source/EMR"
+              FileName="*20221106.csv"
+              DeleteRecursively="False" />
+          </DTS:ObjectData>
+        </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\Foreach Loop Container"
           DTS:CreationName="STOCK:FOREACHLOOP"
@@ -1252,6 +1309,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\Foreach Loop Container\Get List Of Dates" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{97D2F2A0-EEF4-400A-B5E7-944B6924BC03}"
+          DTS:From="Package\Foreach Loop Container\Flexible File Copy"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Foreach Loop Container\Flexible File Delete" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{62A98508-89DD-4497-81A1-4952D94E3862}"
+          DTS:From="Package\Foreach Loop Container\Foreach Loop Container"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Foreach Loop Container\Flexible File Copy" />
       </DTS:PrecedenceConstraints>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
@@ -1280,6 +1353,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="$Project::Working_Folder"
           ReadWriteVariables="User::FolderNames">
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_868d560021614437b52d127e084006b7")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_868d560021614437b52d127e084006b7")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1399,35 +1502,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_868d560021614437b52d127e084006b7.Properties.Settings.get_Default():ST_868d560021614437b52d127e084006b7.Properties.Sett" +
-    "ings")]
-
-namespace ST_868d560021614437b52d127e084006b7.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1667,35 +1741,34 @@ namespace ST_868d560021614437b52d127e084006b7
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_868d560021614437b52d127e084006b7")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_868d560021614437b52d127e084006b7")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_868d560021614437b52d127e084006b7.Properties.Settings.get_Default():ST_868d560021614437b52d127e084006b7.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_868d560021614437b52d127e084006b7.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -1933,15 +2006,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="User::ErrorRecordCount,$Project::Error_Notification_From_EmailId,$Project::Error_Notification_Email_Subject,$Project::Error_Notification_Email_Password,$Project::Error_Notification_To_EmailId,$Project::SMTP_Host,$Project::SMTP_Port">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-          <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -2060,6 +2124,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_43d0f4a3d5994daaa1715683bbe891b9.Properties.Settings.get_Default():ST_43d0f4a3d5994daaa1715683bbe891b9.Properties.Sett" +
+    "ings")]
+
+namespace ST_43d0f4a3d5994daaa1715683bbe891b9.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -2308,35 +2401,6 @@ namespace ST_43d0f4a3d5994daaa1715683bbe891b9
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_43d0f4a3d5994daaa1715683bbe891b9.Properties.Settings.get_Default():ST_43d0f4a3d5994daaa1715683bbe891b9.Properties.Sett" +
-    "ings")]
-
-namespace ST_43d0f4a3d5994daaa1715683bbe891b9.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -2366,6 +2430,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -2662,29 +2735,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Flexible file download"
           TopLeft="233.166666666667,0.166666666666664" />
         <NodeLayout
-          Size="172,41.6"
+          Size="166,42"
+          Id="Package\Foreach Loop Container\Flexible File Copy"
+          TopLeft="108,844" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Foreach Loop Container\Flexible File Delete"
+          TopLeft="99,920" />
+        <NodeLayout
+          Size="172,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\Create Batch Entry"
           TopLeft="55.5,6.5" />
         <NodeLayout
-          Size="140.8,41.6"
+          Size="141,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\DW Transfer"
           TopLeft="68,314.5" />
         <NodeLayout
-          Size="99.2,41.6"
+          Size="99,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\Ods"
           TopLeft="86,206.5" />
         <NodeLayout
-          Size="172,41.6"
+          Size="172,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\RCO Demographic"
           TopLeft="56.5000000000001,418.5" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\Foreach Loop Container\Foreach Loop Container\Stage"
           TopLeft="84.5,104.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Foreach Loop Container\Foreach Loop Container\Update Batch Entry"
+          TopLeft="63.3666666666667,516.933333333334" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Foreach Loop Container.PrecedenceConstraints[Constraint]"
           TopLeft="140,48.5">
@@ -2773,10 +2858,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Foreach Loop Container\Foreach Loop Container\Update Batch Entry"
-          TopLeft="63.3666666666667,516.933333333334" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
           TopLeft="141.533333333333,460.1">
@@ -2802,16 +2883,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="304.8,613.6"
-          Size="304.8,656.8"
+          PanelSize="305,614"
+          Size="305,657"
           Id="Package\Foreach Loop Container\Foreach Loop Container"
           TopLeft="38.5000000000001,148.5" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\Foreach Loop Container\Get List Of Dates"
           TopLeft="100.5,83.5" />
         <NodeLayout
-          Size="160,41.6"
+          Size="160,42"
           Id="Package\Foreach Loop Container\Practice Comparison"
           TopLeft="108.6,14.8" />
         <EdgeLayout
@@ -2868,43 +2949,87 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,1.80000000000001,16,16"
+              BoundingBox="-8,1.8,16,16"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="188.25,886">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 3]"
+          TopLeft="191,805.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5"
+              Start="0,0"
+              End="0,31">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="376.8,860"
-          Size="376.8,903.2"
+          PanelSize="393,992"
+          Size="393,1035"
           Id="Package\Foreach Loop Container"
           TopLeft="122.5,159" />
         <NodeLayout
-          Size="230.4,41.6"
+          Size="230,42"
           Id="Package\Get List Of HJ Practice Folders"
           TopLeft="198.5,82" />
         <NodeLayout
-          Size="222.4,41.6"
+          Size="222,42"
           Id="Package\Get Number of Error Records"
-          TopLeft="195.166666666667,1107.83333333333" />
+          TopLeft="203.166666666667,1234.83333333333" />
         <NodeLayout
-          Size="280,41.6"
+          Size="280,42"
           Id="Package\Send Email Notification for Error Records"
-          TopLeft="171.833333333333,1195" />
+          TopLeft="168.833333333333,1306" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="309.1,1149.43333333333">
+          TopLeft="311.5,1276.83333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.5666666666664"
+              EndConnector="0,29.1666666666699"
               Start="0,0"
-              End="0,38.0666666666664">
+              End="0,21.6666666666699">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.0666666666664" />
+                    End="0,21.6666666666699" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2915,40 +3040,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="308.633333333333,1062.2">
+          TopLeft="316.583333333333,1194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.6333333333336"
+              EndConnector="0,40.8333333333301"
               Start="0,0"
-              End="0,38.1333333333336">
+              End="0,33.3333333333301">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.1333333333336" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="312.3,123.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.4000000000002"
-              Start="0,0"
-              End="0,27.9000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.9000000000002" />
+                    End="0,33.3333333333301" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2971,6 +3074,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,32.7333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="316.25,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{3ABD73D8-BBA7-4E2F-9C59-D87F57133C35}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{18032B5F-C60F-40B2-AF70-B78CF460DE37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -570,13 +570,13 @@
       DTS:DTSID="{1DFBC4C2-EA74-46FB-AB3C-B54D6C09504D}"
       DTS:ObjectName="RCO Stage DB Connection">
       <DTS:PropertyExpression
-        DTS:Name="InitialCatalog">@[$Project::RCO_Stage_DB_Name]</DTS:PropertyExpression>
+        DTS:Name="InitialCatalog">@[$Project::rco_stage_db_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="Password">@[$Project::RCO_Stage_Password]</DTS:PropertyExpression>
+        DTS:Name="Password">@[$Project::db_password]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="ServerName">@[$Project::DB_Server_Name]</DTS:PropertyExpression>
+        DTS:Name="ServerName">@[$Project::db_server_name]</DTS:PropertyExpression>
       <DTS:PropertyExpression
-        DTS:Name="UserName">@[$Project::RCO_Stage_Username]</DTS:PropertyExpression>
+        DTS:Name="UserName">@[$Project::db_username]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -585,7 +585,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABtxNpmf3k2UFgF6WJtPohRAAAAAASAAACgAAAAEAAAAB6GvfEJDpB9doFP14WzpdcYAAAAXQrQL9ePC58LIhGotvRduGMplzlWnsfZFAAAAKSyL9OBH3QGvxfsu1mH73QhjSrM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFqb6BQNplkiDJQDaOcu0vgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC2vpxgBo0B7UJPoPLI9GG4AAAAAASAAACgAAAAEAAAAJ0HQCd0cr+GCd2uN7Z1Q78YAAAAoIwVvQtLcu/k7iQUZcSzXEznm/pjJztAFAAAAHDoUDqivvnjCSOqggbz5IsE0cX9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -665,14 +665,35 @@
           ReadOnlyVariables="User::FileDate,User::Working_Practice_Folder"
           ReadWriteVariables="User::PresentFileList">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_28af279b6ba64bca92f6fdf63eb84bec")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_28af279b6ba64bca92f6fdf63eb84bec")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1063,35 +1084,14 @@ namespace ST_28af279b6ba64bca92f6fdf63eb84bec.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_28af279b6ba64bca92f6fdf63eb84bec")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_28af279b6ba64bca92f6fdf63eb84bec")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4678,37 +4678,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         <NodeLayout
           Size="203,42"
           Id="Package\Get Available File Names"
-          TopLeft="488,103" />
+          TopLeft="521,103" />
         <NodeLayout
           Size="195,42"
           Id="Package\Sequence Container\EMRFile_Appointments"
-          TopLeft="63,35" />
+          TopLeft="72,35" />
         <NodeLayout
           Size="198,42"
           Id="Package\Sequence Container\EMRFile_Demographics"
-          TopLeft="65,108" />
+          TopLeft="70,118" />
         <NodeLayout
           Size="176,42"
           Id="Package\Sequence Container\EMRFile_Insurance"
-          TopLeft="107,180" />
+          TopLeft="84,201" />
         <NodeLayout
           Size="182,42"
           Id="Package\Sequence Container\EMRFile_LabResults"
-          TopLeft="97,239" />
+          TopLeft="83,281" />
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
-          TopLeft="162.25,77">
+          TopLeft="169.25,77">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,23.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4719,30 +4719,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="164,150">
+          TopLeft="170.5,160">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31,30"
+              EndConnector="0,41"
               Start="0,0"
-              End="31,22.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="4,15" />
-                  <mssgle:LineSegment
-                    End="27,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27,15"
-                    Point2="31,15"
-                    Point3="31,19" />
-                  <mssgle:LineSegment
-                    End="31,22.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4753,30 +4741,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="283,201">
+          TopLeft="173,243">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-4,59"
+              EndConnector="0,38"
               Start="0,0"
-              End="3.5,59">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,55" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,55"
-                    Point2="22.5,59"
-                    Point3="18.5,59" />
-                  <mssgle:LineSegment
-                    End="3.5,59" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4788,40 +4764,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="338,339"
-          Size="338,382"
+          PanelSize="338,378"
+          Size="338,421"
           Id="Package\Sequence Container"
-          TopLeft="471,178" />
+          TopLeft="451,180" />
         <NodeLayout
           Size="190,42"
           Id="Package\Truncate Stage Tables"
-          TopLeft="486,31" />
+          TopLeft="520,28" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="581,73">
+          TopLeft="618.75,70">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.5,30"
+              EndConnector="0,33"
               Start="0,0"
-              End="8.5,22.5">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="4,15" />
-                  <mssgle:LineSegment
-                    End="4.5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.5,15"
-                    Point2="8.5,15"
-                    Point3="8.5,19" />
-                  <mssgle:LineSegment
-                    End="8.5,22.5" />
+                    End="0,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4832,30 +4796,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="589.5,145">
+          TopLeft="621.25,145">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.5,33"
+              EndConnector="0,35"
               Start="0,0"
-              End="50.5,25.5">
+              End="0,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.5"
-                    Point2="0,16.5"
-                    Point3="4,16.5" />
-                  <mssgle:LineSegment
-                    End="46.5,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.5,16.5"
-                    Point2="50.5,16.5"
-                    Point3="50.5,20.5" />
-                  <mssgle:LineSegment
-                    End="50.5,25.5" />
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
