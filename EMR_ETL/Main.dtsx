@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{6D18CD05-E5D7-4CC7-8751-5D2DD3473C31}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{7C72BF06-2C35-440E-B0FF-DE1A6AEC7C98}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,10 +21,18 @@
       DTS:CreationName="AzureStorage"
       DTS:DTSID="{7ACC443F-9A43-42E1-88A4-D5C5DD8B0BE3}"
       DTS:ObjectName="Azure Storage Connection">
+      <DTS:PropertyExpression
+        DTS:Name="AccountName">@[$Project::azure_account_name]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="SasToken">@[$Project::azure_sas_token]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <AzureStorageConnectionManager
           ConnectionString="AuthType=SharedAccessSignature;SasResourcePath=;AccountName=bause1devrawmtv;DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;"
-          ConnectByProxy="False" />
+          ConnectByProxy="False">
+          <SasToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC2ENKPa8XytgXibknO9+bSAAAAAASAAACgAAAAEAAAAPO+0M7wSRXx4B6f6ZnGrcM4AQAAgM1s/8UE90qnS7hjtPVFBI4DIWAJnVmEiOT/GI+x6T8HV86kmiGziG5h3eTF6S72e59ycz/7Z1kUlaoCizFOh4rkgGX1nxmsC25qqeP41fgQDi4fKSCE6mkuH3L//9nN9FU23f4+OaGjiKQaGQyd5+3zoCxDjV7Dii2JCw2lgJU/a0t84Qq90W+NB0Q1uvbgaj+ndiaUP3sTFgnLFNRy5VKOEGjqSmLy3BYyVWJ45JtP5Cp2FONSQiLUN08vCEKqr3pWeTvM9vtHPywg1D9KeWzy+C2K2F3/sphdMCmeVD+c9I2bhOjn987lg7qhyV2ga6fahLXcxCz4R5YUhvhhD+pl4bTnFcaeZGNGr3rXHGFO1ZZiGZHb289K8+dW8PwVMRy2G2HjxcaI6SzTMfmi6bEFhRiY6zRWFAAAAM0ujz1BoQlol07/0HD2pnE2SHTv</SasToken>
+        </AzureStorageConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -48,7 +56,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA84qR5bSJoOWz2YCMfCWLHAAAAAASAAACgAAAAEAAAACRjUdP1mvsNuUq9bHifxukYAAAAkKIzx0d6aNMNIIVKpP4Re9D5z4TzBd1QFAAAAGgsxWMX0f96vqokO6P/hbYT5c3c</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/703NkayxpyvdtoQUtaQVAAAAAASAAACgAAAAEAAAANV8zpL+uaZrtXlurcBXiDIYAAAAvpGO+P/x1uVnOx4aStgBIlq2VVQJk6eoFAAAAMTEh4ObBgu9kGYf5dgoLkVDgvu+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,7 +81,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABf7OQYQeeHmySH81K73iArAAAAAASAAACgAAAAEAAAAOYMlEfxZBePJPGcoG2HYpkYAAAAgbuI4SXUJcaCagDT9ymcwZKpskpgEsntFAAAACffEAMFTYCQju4L8umqyd9tC/+9</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACYSXIsSFyszDfOseVFz+vJAAAAAASAAACgAAAAEAAAAENQ3abWoBwNkjHF9QmQX/4YAAAAeJxhZnVcuJxYAaiw4G5hxr0jlo3KMTzKFAAAACFEbVqPyw1VSyRMuk3daO8Yzgzq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -98,7 +106,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABMiJtxydzzpJj4fphy3Nk8AAAAAASAAACgAAAAEAAAAGOWiMvQTi8mInRiDLnhHfAYAAAAuKyr2NUfyu7JLi+rMP0DU1qMedC4NTHRFAAAAIMDF7hU4PpEJKbyS0/pb7n8kbHI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2JM+DQ+gBMSb5hYconDksAAAAAASAAACgAAAAEAAAAEmcZZrKBgPJ88tyfst1iwcYAAAAjUM3QNPv5TNXJZzrW+v3U+U3byz2OPYpFAAAAA0B/t2u8tvHt67wb3eKURQWBgRO</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -123,7 +131,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABx20SmN6Ewj/XaVTsE5uWBAAAAAASAAACgAAAAEAAAAGh/gf3lggRuigjO6z74qO4YAAAANZXpq+h4+ZE032c2aMXaIqEK/4VBbEqYFAAAAN4BUxvxxlNF2KbqjMv9pmvHGJKK</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl4xK9Owf+kyWI/YUg85NtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB8n3fWJsb6B8Qme9QUw02FAAAAAASAAACgAAAAEAAAABhCUlik+XZ5s9wfVDBj+DUYAAAAXiFfkiqUOGAOvo6Iv7Bg/DD97Glq1yZqFAAAAHHMQ2GqJwTZ1d8rZ6+NyMbhpkym</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -294,7 +302,7 @@
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Create Batch Entry"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -330,7 +338,7 @@
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="DW Transfer"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -359,7 +367,7 @@
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Ods"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -394,7 +402,7 @@
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="RCO Demographic"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -476,7 +484,7 @@
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="Update Batch Entry"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -551,7 +559,7 @@
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Get List Of Dates"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -1209,7 +1217,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Practice Comparison"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="SqlStatementSource">"SELECT COUNT(Short_Name) FROM [dbo].[Dim_Practice] WHERE Short_Name = '"+ @[User::PracticeShortName] +"'"</DTS:PropertyExpression>
@@ -1262,7 +1270,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get List Of HJ Practice Folders"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -1894,7 +1902,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Number of Error Records"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1915,7 +1923,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Send Email Notification for Error Records"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -2584,6 +2592,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Get Number of Error Records" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A60DDB4E-E432-4EF3-82FB-EEEC7097D4E8}"
+      DTS:From="Package\Flexible file download"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Get List Of HJ Practice Folders" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
       DTS:DTSID="{703AD9C2-A37D-43EC-8408-62A6128DD57E}"
@@ -2646,9 +2662,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="184,41.6"
+          Size="162.4,41.6"
           Id="Package\Flexible file download"
-          TopLeft="619,51" />
+          TopLeft="233.166666666667,0.166666666666664" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Foreach Loop Container\Foreach Loop Container\Create Batch Entry"
@@ -2862,22 +2878,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="376.8,860"
           Size="376.8,903.2"
           Id="Package\Foreach Loop Container"
-          TopLeft="122.5,107.5" />
+          TopLeft="122.5,159" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Get List Of HJ Practice Folders"
-          TopLeft="203.5,15.5" />
+          TopLeft="198.5,82" />
         <NodeLayout
           Size="222.4,41.6"
           Id="Package\Get Number of Error Records"
-          TopLeft="195.166666666667,1056.33333333333" />
+          TopLeft="195.166666666667,1107.83333333333" />
         <NodeLayout
           Size="280,41.6"
           Id="Package\Send Email Notification for Error Records"
-          TopLeft="171.833333333333,1143.5" />
+          TopLeft="171.833333333333,1195" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="309.1,1097.93333333333">
+          TopLeft="309.1,1149.43333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2899,7 +2915,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="308.633333333333,1010.7">
+          TopLeft="308.633333333333,1062.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2921,18 +2937,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="314.8,57.1">
+          TopLeft="312.3,123.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.4000000000001"
+              EndConnector="0,35.4000000000002"
               Start="0,0"
-              End="0,42.9000000000001">
+              End="0,27.9000000000002">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.9000000000001" />
+                    End="0,27.9000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="314.033333333333,41.7666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.2333333333333"
+              Start="0,0"
+              End="0,32.7333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.7333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
