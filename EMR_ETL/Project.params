@@ -358,7 +358,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="azure_source_container_name">
+    SSIS:Name="azure_source_folder_path">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{32f56ae6-509d-419b-8743-77a23941f290}</SSIS:Property>
@@ -379,7 +379,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="azure_source_file_name">
+    SSIS:Name="azure_source_file_extension">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{1807c65e-363a-4a3c-aba8-188646f58211}</SSIS:Property>
@@ -394,7 +394,28 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">*.csv</SSIS:Property>
+        SSIS:Name="Value">.csv</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="azure_archive_folder_path">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{5e91340f-1c0a-45ec-8fb1-b710e85b8a19}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">emr-file-patient-load/archieve</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
